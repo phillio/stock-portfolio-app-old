@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
     "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -14,6 +15,7 @@
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.9.1",
     "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "pg": "^7.18.2",
     "react": "^16.13.0",
@@ -23,12 +25,12 @@
     "sequelize": "^5.21.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "nodemon server.js",
-    "db:init": "dropdb --if-exists stock_portfolio_app && createdb stock_portfolio_app",
+    "db:init": "dropdb --if-exists stocks_portfolio_db && createdb stocks_portfolio_db",
     "db:reset": "node ./scripts/resetDb.js",
     "db:seed": "node ./scripts/seedDb.js"
   },
